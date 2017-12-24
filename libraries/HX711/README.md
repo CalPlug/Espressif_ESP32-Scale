@@ -7,7 +7,7 @@ This is my humble attempt at creating an Arduino library for this ADC:
 http://www.dfrobot.com/image/data/SEN0160/hx711_english.pdf
 
 Other libraries exist, including this very good one, which I first used and which is the starting point for my library:
-https://github.com/aguegu/ardulibs/tree/master/hx711
+https://github.com/aguegu/ardulibs/tree/master/hx711 (Modified for ESP32: https://github.com/lemio/HX711/blob/master/HX711.cpp)
 
 Although other libraries exist, I needed a slightly different approach, so here's how my library is different than others:
 
