@@ -1,5 +1,4 @@
 //PROJECT LIBRA SCALE MEASUREMENT SYSTEM
-//Bluetooth LE scale for the ESP32
 //CODE BY MICHAEL KLOPFER + Calit2 Team (2017)
 
 #include <Hx711.h> //Load Cell A/D (HX711 library)
