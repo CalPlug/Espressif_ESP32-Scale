@@ -7,7 +7,7 @@
 #include <Hx711EXT.h> //Load Cell A/D (HX711 Extended library by M. J. Klopfer)
 #include <Adafruit_TLC59711.h> //12 Ch LED Controller, uses SPI only MOSI and CLK
 #include <SPI.h>
-#include <EEPROM.h>  //this is needed to access EEPROM
+#include <EEPROM.h>  //this is needed to access EEPROM (not implemented yet)
  
 #define BLINK_GPIO 13
 
@@ -36,8 +36,7 @@ portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
 //Global Variables
 float calibrated_scale_weight_g=0; //Holding variable for weight
 float tare_subtraction_factor=0;  //When TARE is processed, this value is subtracted for the displayed weight
-volatile int interruptcounter = 0;
-
+volatile int interruptcounter = 0;  //Volatile as this is accessed by multiple threaded activities  //(see: https://techtutorialsx.com/2017/09/30/esp32-arduino-external-interrupts/)
 //Initial Calibration Factors and offsets
 float scale_gain=-.0022103;   //Initial Sensor Calibration Offset Value (fill in the `ratio` value here) [ratio = (w - offset) / 1000]  where W is a known weight, say 1000 grams
 float scale_offset=36820; //Initial Sensor Calibration Offset Value (fill in the `offset` value here)
@@ -158,7 +157,7 @@ void hello_task(void *pvParameter)
  
 void loop()
 {
-    xTaskCreate(&a_task, "a_task", 4096, NULL, 5, NULL);
+    xTaskCreate(&a_task, "a_task", 4096, NULL, 5, NULL); //Details:  http://web.ist.utl.pt/~ist11993/FRTOS-API/group___task_ctrl.html
     xTaskCreate(&hello_task, "hello_task", 4096,NULL,5,NULL );
     while (1)
     {} //Just loop after first run, treat this as a main() function rather than a loop
