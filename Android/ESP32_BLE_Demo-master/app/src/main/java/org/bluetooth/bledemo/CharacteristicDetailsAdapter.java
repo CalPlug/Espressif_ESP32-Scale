@@ -149,18 +149,18 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         	fields.charName = (TextView)convertView.findViewById(R.id.char_details_name);
         	fields.charUuid = (TextView)convertView.findViewById(R.id.char_details_uuid);
         	
-        	fields.charDataType = (TextView)convertView.findViewById(R.id.char_details_type);
+        	//fields.charDataType = (TextView)convertView.findViewById(R.id.char_details_type);
         	fields.charProperties = (TextView) convertView.findViewById(R.id.char_details_properties);
         	
-        	fields.charStrValue = (TextView) convertView.findViewById(R.id.char_details_ascii_value);
+        	//fields.charStrValue = (TextView) convertView.findViewById(R.id.char_details_ascii_value);
         	fields.charDecValue = (TextView) convertView.findViewById(R.id.char_details_decimal_value);
-        	fields.charHexValue = (EditText) convertView.findViewById(R.id.char_details_hex_value);
+        	//fields.charHexValue = (EditText) convertView.findViewById(R.id.char_details_hex_value);
         	fields.charDateValue = (TextView) convertView.findViewById(R.id.char_details_timestamp);
         	
         	fields.notificationBtn = (ToggleButton) convertView.findViewById(R.id.char_details_notification_switcher);
         	fields.readBtn = (Button) convertView.findViewById(R.id.char_details_read_btn);
         	fields.writeBtn = (Button) convertView.findViewById(R.id.char_details_write_btn);
-        	fields.writeBtn.setTag(fields.charHexValue);
+        	//fields.writeBtn.setTag(fields.charHexValue);
         	
         	fields.readBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -172,9 +172,10 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         	fields.writeBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					EditText hex = (EditText) v.getTag();
-					String newValue =  hex.getText().toString().toLowerCase(Locale.getDefault());
-					Log.d("EDIT TEXT String", newValue);
+					//EditText hex = (EditText) v.getTag();
+					//String newValue =  hex.getText().toString().toLowerCase(Locale.getDefault());
+					//Log.d("EDIT TEXT String", newValue);
+					String newValue = "0x25";
 					byte[] dataToWrite = parseHexStringToBytes(newValue);
 
 					mBleWrapper.writeDataToCharacteristic(mCharacteristic, dataToWrite);
@@ -196,8 +197,9 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         }			
 		
         // set proper values into the view
-        fields.charPeripheralName.setText(mBleWrapper.getDevice().getName());
-        fields.charPeripheralAddress.setText(mBleWrapper.getDevice().getAddress());
+        //fields.charPeripheralName.setText(mBleWrapper.getDevice().getName());
+        fields.charPeripheralName.setText("BLE LIBRA");
+		fields.charPeripheralAddress.setText(mBleWrapper.getDevice().getAddress());
         
         String tmp = mCharacteristic.getService().getUuid().toString().toLowerCase(Locale.getDefault());
         fields.charServiceUuid.setText(tmp);
@@ -205,12 +207,12 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         
         String uuid = mCharacteristic.getUuid().toString().toLowerCase(Locale.getDefault());
         String name = BleNamesResolver.resolveCharacteristicName(uuid);
-        
+        name = "Weight in Grams";
         fields.charName.setText(name);
         fields.charUuid.setText(uuid);
         
         int format = mBleWrapper.getValueFormat(mCharacteristic);
-        fields.charDataType.setText(BleNamesResolver.resolveValueTypeDescription(format));
+        //fields.charDataType.setText(BleNamesResolver.resolveValueTypeDescription(format));
         int props = mCharacteristic.getProperties();
         String propertiesString = String.format("0x%04X [", props);
         if((props & BluetoothGattCharacteristic.PROPERTY_READ) != 0) propertiesString += "read ";
@@ -224,16 +226,16 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         fields.notificationBtn.setChecked(mNotificationEnabled);
         fields.readBtn.setEnabled((props & BluetoothGattCharacteristic.PROPERTY_READ) != 0);
         fields.writeBtn.setEnabled((props & (BluetoothGattCharacteristic.PROPERTY_WRITE | BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE)) != 0);
-        fields.charHexValue.setEnabled(fields.writeBtn.isEnabled());
+        //fields.charHexValue.setEnabled(fields.writeBtn.isEnabled());
         
-        fields.charHexValue.setText(mAsciiValue);
-        fields.charStrValue.setText(mStrValue);
+        //fields.charHexValue.setText(mAsciiValue);
+        //fields.charStrValue.setText(mStrValue);
 
         //Do not delete these part
         if (mRawValue==null){
 			fields.charDecValue.setText("");
 		}else
-        	fields.charDecValue.setText(String.format("%f",mFloatValue)+" grams");
+        	fields.charDecValue.setText(String.format("%f",mFloatValue)+" g");
         //end
 
 
@@ -249,9 +251,9 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
 		TextView charServiceUuid;
 		TextView charUuid;
 		TextView charName;
-		TextView charDataType;
-		TextView charStrValue;
-		EditText charHexValue;
+		//TextView charDataType;
+		//TextView charStrValue;
+		//EditText charHexValue;
 		TextView charDecValue;
 		TextView charDateValue;
 		TextView charProperties;
