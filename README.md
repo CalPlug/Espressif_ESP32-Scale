@@ -1,4 +1,4 @@
-# HX711 Weight Scale Examples with Espressif ESP32, Arduino, and Bluetooth Low Energy Interfacing
+# Avia HX711 Based Weight Scale Examples with Espressif ESP32, Arduino, and Bluetooth Low Energy Interfacing
 
 Project Team: Jonathan Lim, Richard Xu, Josefina Zinkewich, Hamed Ghafarshad, and Sean Santarsiero
 
