@@ -1,8 +1,8 @@
 # HX711 Weight Scale Examples with Espressif ESP32, Arduino, and Bluetooth Low Energy Interfacing
 
-Project Team: 
+Project Team: Jonathan Lim, Richard Xu, Josefina Zinkewich, Hamed Ghafarshad, and Sean Santarsiero
 
-Team Manager: Michael Klopfer, PhD
+Project Manager: Michael Klopfer, PhD and G.P. Li
 
 University of California, Irvine (Calit2)
 
