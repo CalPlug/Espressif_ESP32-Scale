@@ -160,8 +160,18 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
         	fields.notificationBtn = (ToggleButton) convertView.findViewById(R.id.char_details_notification_switcher);
         	fields.readBtn = (Button) convertView.findViewById(R.id.char_details_read_btn);
         	fields.writeBtn = (Button) convertView.findViewById(R.id.char_details_write_btn);
+        	fields.callibrateBtn = (Button) convertView.findViewById(R.id.char_details_calibrate_btn);
         	//fields.writeBtn.setTag(fields.charHexValue);
-        	
+
+			fields.callibrateBtn.setOnClickListener(new View.OnClickListener(){
+				@Override
+				public void onClick(View v){
+					String calibV = "0x26";
+					byte[] callibrateData = parseHexStringToBytes(calibV);
+					mBleWrapper.writeDataToCharacteristic(mCharacteristic, callibrateData);
+				}
+			});
+
         	fields.readBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -261,5 +271,6 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
 		ToggleButton notificationBtn;
 		Button readBtn;
 		Button writeBtn;
+		Button callibrateBtn;
 	}
 }

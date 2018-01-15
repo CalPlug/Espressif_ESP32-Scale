@@ -4,6 +4,7 @@
     <shared>
       <config>
         <devices>
+          <device id="Nexus 9" />
           <device id="Nexus 10" />
           <device id="Nexus 5" />
         </devices>
@@ -38,6 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CharacteristicDetailsAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicDetailsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="163" column="58" lean-forward="true" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
+              <folding>
+                <element signature="e#6463#6714#0" expanded="true" />
+                <element signature="e#6713#6714#0" expanded="true" />
+                <element signature="e#6761#6910#0" expanded="true" />
+                <element signature="e#6909#6910#0" expanded="true" />
+                <element signature="e#6958#7384#0" expanded="true" />
+                <element signature="e#7383#7384#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="activity_peripheral.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_peripheral.xml">
           <provider editor-type-id="text-editor">
@@ -77,15 +95,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="peripheral_list_characteristic_item.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="peripheral_list_characteristic_item.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/peripheral_list_characteristic_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+          <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
         </entry>
@@ -131,15 +149,15 @@
       </file>
       <file leaf-file-name="peripheral_details_characteristic_item.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/peripheral_details_characteristic_item.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="285" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="298" column="29" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="51" />
               <folding>
                 <element signature="e#6413#6437#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2">
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
         </entry>
@@ -151,25 +169,6 @@
               <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_scanning_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_scanning_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
-              <folding>
-                <element signature="e#675#694#0" expanded="true" />
-                <element signature="e#1079#1098#0" expanded="true" />
-                <element signature="e#1441#1460#0" expanded="true" />
-                <element signature="e#1931#1955#0" expanded="true" />
-                <element signature="e#2343#2367#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1892,7 +1891,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/PeripheralActivity.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/org/bluetooth/bledemo/R.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/peripheral_details_characteristic_item_test.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicDetailsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicsListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/BleNamesResolver.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/peripheral_list_services_header.xml" />
@@ -1904,6 +1902,7 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge/peripheral_details_characteristic_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/peripheral_details_characteristic_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicDetailsAdapter.java" />
       </list>
     </option>
   </component>
@@ -2146,7 +2145,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516051874276" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516056991610" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2194,7 +2193,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516051874276" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516056991610" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2377,7 +2376,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516051874277" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516056991611" />
       </method>
     </configuration>
     <list size="1">
@@ -2638,7 +2637,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="210" column="23" lean-forward="false" selection-start-line="210" selection-start-column="15" selection-end-line="210" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#6463#6714#0" expanded="true" />
+            <element signature="e#6713#6714#0" expanded="true" />
+            <element signature="e#6761#6910#0" expanded="true" />
+            <element signature="e#6909#6910#0" expanded="true" />
+            <element signature="e#6958#7384#0" expanded="true" />
+            <element signature="e#7383#7384#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2811,14 +2817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicDetailsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1382">
-          <caret line="161" column="81" lean-forward="false" selection-start-line="161" selection-start-column="74" selection-end-line="161" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/peripheral_list_services_item.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -2955,6 +2953,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/peripheral_list_characteristic_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/peripheral_list_characteristic_item.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -2978,27 +2987,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/peripheral_details_characteristic_item.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="285" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="298" column="29" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="51" />
           <folding>
             <element signature="e#6413#6437#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/peripheral_list_characteristic_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/bluetooth/bledemo/CharacteristicDetailsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="80">
+          <caret line="163" column="58" lean-forward="true" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
+          <folding>
+            <element signature="e#6463#6714#0" expanded="true" />
+            <element signature="e#6713#6714#0" expanded="true" />
+            <element signature="e#6761#6910#0" expanded="true" />
+            <element signature="e#6909#6910#0" expanded="true" />
+            <element signature="e#6958#7384#0" expanded="true" />
+            <element signature="e#7383#7384#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
   </component>
