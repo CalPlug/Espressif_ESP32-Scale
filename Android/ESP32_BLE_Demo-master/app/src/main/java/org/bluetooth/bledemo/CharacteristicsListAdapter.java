@@ -68,7 +68,6 @@ public class CharacteristicsListAdapter extends BaseAdapter {
             BluetoothGattCharacteristic ch = getCharacteristic(position);
             String uuid = ch.getUuid().toString().toLowerCase(Locale.getDefault());
             String name = BleNamesResolver.resolveCharacteristicName(uuid);
-            
             fields.charName.setText(name);
             fields.charUuid.setText(uuid);
    
