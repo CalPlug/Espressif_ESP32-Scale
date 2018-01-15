@@ -15,7 +15,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="@dimen/mediumText"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -32,7 +32,7 @@
             android:layout_weight="5"
             android:text=""
             android:textColor="#bbb"
-            android:textSize="14sp" />
+            android:textSize="@dimen/mediumSmallText" />
 
         <TextView
             android:id="@+id/peripheral_list_service_type"
@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:text=""
             android:textColor="#bbb"
-            android:textSize="14sp" />
+            android:textSize="@dimen/mediumSmallText" />
 
     </LinearLayout>
 

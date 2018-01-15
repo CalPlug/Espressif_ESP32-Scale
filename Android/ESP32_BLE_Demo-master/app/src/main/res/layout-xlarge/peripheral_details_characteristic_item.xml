@@ -3,17 +3,17 @@
     android:id="@+id/peripheral_details_characteristic_item"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView1"
@@ -23,7 +23,7 @@
                 android:layout_weight="0"
                 android:text="Peripheral:"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="@dimen/mediumText" />
 
             <TextView
                 android:id="@+id/char_details_peripheral_name"
@@ -31,14 +31,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="@dimen/mediumText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView6"
@@ -48,7 +49,7 @@
                 android:layout_weight="0"
                 android:text="Address:"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
             <TextView
                 android:id="@+id/char_details_peripheral_address"
@@ -59,24 +60,24 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="right|center_vertical"
                 android:layout_weight="0"
                 android:text="Service:"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="@dimen/mediumText" />
 
             <TextView
                 android:id="@+id/char_details_service"
@@ -84,14 +85,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="@dimen/mediumText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView7"
@@ -102,7 +104,7 @@
                 android:layout_weight="0"
                 android:text="UUID:"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
             <TextView
                 android:id="@+id/char_details_service_uuid"
@@ -112,14 +114,14 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/hr_text_view"
@@ -129,7 +131,7 @@
                 android:layout_weight="0"
                 android:text="Characteristic:"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="@dimen/mediumText" />
 
             <TextView
                 android:id="@+id/char_details_name"
@@ -137,14 +139,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="1" />
+                android:textSize="@dimen/mediumText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView8"
@@ -155,7 +157,7 @@
                 android:layout_weight="0"
                 android:text="UUID:"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
             <TextView
                 android:id="@+id/char_details_uuid"
@@ -165,21 +167,21 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumSmallText" />
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView5"
@@ -189,7 +191,7 @@
                 android:layout_weight="0"
                 android:text="Properties:"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="@dimen/mediumText" />
 
             <TextView
                 android:id="@+id/char_details_properties"
@@ -197,7 +199,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="@dimen/mediumText" />
 
         </TableRow>
 
@@ -219,7 +222,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
                 android:textColor="#888"
-                android:textSize="30sp" />
+                android:textSize="@dimen/xlargeText" />
 
             <TextView
                 android:id="@+id/char_details_decimal_value"
@@ -227,7 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="10"
-                android:textSize="30sp" />
+                android:textSize="@dimen/xlargeText" />
 
         </TableRow>
 
@@ -245,14 +248,14 @@
                 android:layout_weight="0"
                 android:text="Updated:"
                 android:textColor="#888"
-                android:textSize="10sp" />
+                android:textSize="@dimen/mediumText" />
 
             <TextView
                 android:id="@+id/char_details_timestamp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="9" />
+                android:layout_weight="@dimen/mediumText" />
 
         </TableRow>
 
@@ -266,21 +269,29 @@
             android:id="@+id/char_details_notification_switcher"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
             android:text="ToggleButton"
             android:textOff="Notification"
-            android:textOn="Notification"
+            android:textOn="Notification" />
+
+        <Button
+            android:id="@+id/char_details_calibrate_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:text="Calibrate" />
 
         <Button
             android:id="@+id/char_details_read_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_marginTop="1dp"
             android:layout_weight="1"
             android:text="Read"
-            android:layout_gravity="bottom"
 
             />
 
@@ -288,11 +299,10 @@
             android:id="@+id/char_details_write_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_marginTop="1dp"
             android:layout_weight="1"
-            android:text="Tare"
-            android:layout_gravity="bottom"
-            />
+            android:text="Tare" />
 
     </LinearLayout>
 
