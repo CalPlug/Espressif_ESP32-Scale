@@ -127,9 +127,7 @@ void setup()
   // Create a BLE Characteristic
   pCharacteristic = pService->createCharacteristic(
                       CHARACTERISTIC_UUID,
-                      BLECharacteristic::PROPERTY_READ   |
                       BLECharacteristic::PROPERTY_WRITE  |
-                      BLECharacteristic::PROPERTY_NOTIFY |
                       BLECharacteristic::PROPERTY_INDICATE
                     );
 
@@ -142,7 +140,6 @@ void setup()
   pCharacteristic2 = pService->createCharacteristic(
                     CHARACTERISTIC2_UUID,
                     BLECharacteristic::PROPERTY_READ   |
-                    BLECharacteristic::PROPERTY_WRITE  |
                     BLECharacteristic::PROPERTY_NOTIFY |
                     BLECharacteristic::PROPERTY_INDICATE
                   );
@@ -165,6 +162,8 @@ void handleInterrupt()
   
  void a_task(void *pvParameter)
 {
+  float firstValue;
+  float secondValue;
     while(1)
   {
   //Read scale Value
@@ -184,8 +183,14 @@ void handleInterrupt()
   printf("Measured Weight: %f grams\n", calibrated_scale_weight_g);
   printf("Measured Weight: %.3f ounces\n", (calibrated_scale_weight_g*0.035274));
   printf("Measured Weight: %.4f Newtons\n", (calibrated_scale_weight_g*0.0098));
-  printf("\n");
+  
   vTaskDelay(500 / portTICK_RATE_MS);
+ 
+ // printf("Scale: %f  \n", scale.get_scale());
+  printf("GETMedianGram; %f \n", scale.getMedianGram(byte(2)));
+  printf("\n");
+
+
   
   //BLE Code
   union Data data;
@@ -205,7 +210,15 @@ void handleInterrupt()
       pCharacteristic->setValue(&inniNum, 1);
       Serial.printf("Data received, Interrupt activated\n");
     }
-    
+    else if (great == "$"){
+      firstValue = scale.getMedianGram(byte(2));   // first innitial no weight on the bar
+      scale.setOffset(firstValue);
+      Serial.printf("Data received, Calibration on going\n");
+    }
+    else if (great == "#"){
+      secondValue = scale.getMedianGram(byte(2));
+      scale.setScale((firstValue-secondValue)/100);  //Try to reset the gain (w-innitial)/100 
+    }
   }
   }
 }
