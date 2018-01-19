@@ -188,7 +188,7 @@ void handleInterrupt()
  
  // printf("Scale: %f  \n", scale.get_scale());
   printf("GETMedianGram; %f \n", scale.getMedianGram(byte(2)));
-  printf("\n");
+
 
 
   
@@ -212,14 +212,23 @@ void handleInterrupt()
     }
     else if (great == "$"){
       firstValue = scale.getMedianGram(byte(2));   // first innitial no weight on the bar
-      scale.setOffset(firstValue);
+      uint8_t inniNum = 25;
+      pCharacteristic->setValue(&inniNum, 1);
       Serial.printf("Data received, Calibration on going\n");
+      Serial.printf("Offset   %f\n",firstValue);
     }
     else if (great == "#"){
-      secondValue = scale.getMedianGram(byte(2));
-      scale.setScale((firstValue-secondValue)/100);  //Try to reset the gain (w-innitial)/100 
+      secondValue = (float)scale.averageMedianValue(2);
+      scale.setOffset(firstValue);
+      inherent_offset = firstValue;
+      scale.setScale((100-firstValue+inherent_offset)/secondValue);  //Try to reset the gain (w-innitial)/1000 
+      uint8_t inniNum = 25;
+      pCharacteristic->setValue(&inniNum, 1);
+      Serial.printf("Gain   %f\n",(100-firstValue+inherent_offset)/secondValue);
     }
-  }
+
+  }  
+  printf("\n");
   }
 }
  
