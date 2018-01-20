@@ -84,14 +84,13 @@ public class BleNamesResolver {
 		mServices.put("00001813-0000-1000-8000-00805f9b34fb", "Scan Parameters");
 		mServices.put("00001804-0000-1000-8000-00805f9b34fb", "Tx Power");
 
-		mServices.put("4fafc201-1fb5-459e-8fcc-c5c9c331914b", "LED CONTROL");
-		mServices.put("45ecddcf-c316-488d-8558-3222e5cb9b3c", "Environmental Sensors Service");
+		mServices.put("4fafc201-1fb5-459e-8fcc-c5c9c331914b", "Urology service");
+//		mServices.put("45ecddcf-c316-488d-8558-3222e5cb9b3c", "Environmental Sensors Service");
 
 
-		mCharacteristics.put("beb5483e-36e1-4688-b7f5-ea07361b26a8", "LED SWITCH");
-		mCharacteristics.put("4a78b8dd-a43d-46cf-9270-f6b750a717c8", "Ambient Light");
-		mCharacteristics.put("d240dbed-7d22-45bb-b810-add58a6c856b", "Temperature");
-		mCharacteristics.put("3abcedb6-e652-4415-9741-ebecc11c4580", "Humidity");
+		mCharacteristics.put("beb5483e-36e1-4688-b7f5-ea07361b26a8", "Tare and Calibrate");
+		mCharacteristics.put("4a78b8dd-a43d-46cf-9270-f6b750a717c8", "Weight");
+
 
 		mCharacteristics.put("00002a43-0000-1000-8000-00805f9b34fb", "Alert Category ID");
 		mCharacteristics.put("00002a42-0000-1000-8000-00805f9b34fb", "Alert Category ID Bit Mask");

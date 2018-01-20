@@ -1,0 +1,163 @@
+[
+    {
+        "outputFile": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 52,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 113,
+                        "endColumn": 52,
+                        "endOffset": 161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 52,
+                    "endOffset": 270
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 52,
+                        "endOffset": 107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 275,
+                    "endColumn": 52,
+                    "endOffset": 323
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 167,
+                        "endColumn": 52,
+                        "endOffset": 215
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 328,
+                    "endColumn": 64,
+                    "endOffset": 388
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 221,
+                        "endColumn": 64,
+                        "endOffset": 281
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 393,
+                    "endLine": 14,
+                    "endColumn": 12,
+                    "endOffset": 679
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 684,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 839
+                },
+                "from": {
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            }
+        ]
+    }
+]

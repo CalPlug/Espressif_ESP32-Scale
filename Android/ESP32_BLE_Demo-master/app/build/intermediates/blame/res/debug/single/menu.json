@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\scanning.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\menu\\scanning.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\peripheral.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\menu\\peripheral.xml"
+    }
+]

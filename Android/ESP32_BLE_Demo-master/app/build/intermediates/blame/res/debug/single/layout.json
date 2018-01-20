@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\peripheral_list_characteristic_item.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\peripheral_list_characteristic_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\peripheral_details_characteristic_item.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\peripheral_details_characteristic_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_peripheral.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\activity_peripheral.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_scanning_item.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\activity_scanning_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\peripheral_list_services_item.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\peripheral_list_services_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\peripheral_list_services_header.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\peripheral_list_services_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\progress_indicator.xml",
+        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\layout\\progress_indicator.xml"
+    }
+]

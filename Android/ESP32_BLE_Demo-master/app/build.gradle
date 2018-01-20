@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "org.bluetooth.bledemo"
         minSdkVersion 21
-        targetSdkVersion 23
+        targetSdkVersion 18
     }
 
     buildTypes {
