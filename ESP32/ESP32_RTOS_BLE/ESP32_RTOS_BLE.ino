@@ -39,16 +39,15 @@ portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
 //----------------------------------
 //Global Variables
 float calibrated_scale_weight_g=0; //Holding variable for weight
-float tare_subtraction_factor=0;  // When TARE is processed, this value is subtracted for the displayed weight
 volatile int interruptcounter = 0;  //Volatile as this is accessed by multiple threaded activities  //(see: https://techtutorialsx.com/2017/09/30/esp32-arduino-external-interrupts/)
 
 //Initial Calibration Factors and offsets
-const float default_scale_gain=-.0022103;   //Initial Sensor Calibration Offset Value (fill in the `ratio` value here) [ratio = (w - offset) / 1000]  where W is a known weight, say 1000 grams  ((Used if EEPROM Issue is suspected))
+const float default_scale_gain=.0022103;   //Initial Sensor Calibration Offset Value (fill in the `ratio` value here) [ratio = (w - offset) / 1000]  where W is a known weight, say 1000 grams  ((Used if EEPROM Issue is suspected))
 const float default_scale_offset=30769.40;  //ADC Value of unloaded sensor (Used if EEPROM Issue is suspected)
 
-float scale_gain = -.0022103; //Initial Sensor Calibration Offset Value (fill in the `offset` value here) - working copy, can be changed and overwritten
+float scale_gain = .0022103; //Initial Sensor Calibration Offset Value (fill in the `offset` value here) - working copy, can be changed and overwritten
 float scale_offset = 30769.40;  //ADC Value of unloaded sensor - working copy, can be changed and overwritten
-
+float tare_subtraction_factor=-6128;
 //Piezo Parameters
 int freq1 = 2000;
 int freq2 = 125;
@@ -96,16 +95,19 @@ void setup()
 {
   Serial.begin(115200);  //begin Serial for LCD
     
-	//This needs to be added:
-		//Read from EEPROM, insert values into scale_offset and default_offset
-		//if this faiils, run the following
-		//	scale_gain = default_scale_gain; //Use Default Value
+  //This needs to be added:
+    //Read from EEPROM, insert values into scale_offset and default_offset
+    //if this faiils, run the following
+    //  scale_gain = default_scale_gain; //Use Default Value
         //  scale_offset=default_scale_offset; //Use Default Value
-	
-	//Set scale calibration
-	scale.SetScale(scale_gain);  //Set Scale Gain from working value
-	scale.SetOffset(scale_offset); //set scale offset from working value
-	
+  //Set scale calibration
+  
+  scale.setScale(scale_gain);  //Set Scale Gain from working value
+  scale.setOffset(scale_offset); //set scale offset from working value
+  
+  tare_subtraction_factor=(scale.getMedianGram(byte(2))-scale_offset);  //default power on tare
+  
+  
   //User Interface Buttons Initialize
   pinMode(TAREBTN, INPUT_PULLUP);      //Tare Button 
   attachInterrupt(digitalPinToInterrupt(TAREBTN), handleInterrupt, RISING);
@@ -169,6 +171,25 @@ void handleInterrupt()
     interruptcounter++;
     portEXIT_CRITICAL_ISR(&mux);
   }
+
+  void setCalZero()
+  {
+    long readval;
+    readval = scale.averageMedianValue(byte(2)); //READ THE MEDIAN VALUE OF 3 THEN AVERAGE WITH A SECOND MEDIAN OF 3
+  scale_offset = readval; //Set the value of the unloaded scale as the offset value
+  scale.setOffset(scale_offset); //set scale offset from working value, that is updated from the read
+  }
+  
+ void setCalHundred()
+  {
+  //the offset should be done before this
+    long readval;
+    readval = scale.averageMedianValue(byte(2)); //READ THE MEDIAN VALUE OF 3 THEN AVERAGE WITH A SECOND MEDIAN OF 3, when loaded with the 100.0g calibration weight.
+  float gainval = (float)(readval - scale_offset)/(100-0); //calculate the factor for the gain using the distance formula, offset is assumed to be 0g of weight
+  scale_gain = 1/gainval; //Set the value of the calculated gain as the working gain valueunloaded scale as the offset value
+  scale.setScale(scale_gain); //update the new gain value
+  tare_subtraction_factor=(scale.getMedianGram(byte(2))-scale_offset)-100;
+  }
   
  void a_task(void *pvParameter)
 {
@@ -178,7 +199,7 @@ void handleInterrupt()
   {
   
   //Read scale Value
-  calibrated_scale_weight_g = scale.getMedianGram(byte(2));  //  Read scale value in grams, return mean average from 3 sets of median of 3 readings
+  calibrated_scale_weight_g = scale.getMedianGram(byte(2))-scale_offset;  //  Read scale value in grams, return mean average from 3 sets of median of 3 readings
 
   if (interruptcounter > 0) //Look for Tare button Press
     {
@@ -187,9 +208,10 @@ void handleInterrupt()
      interruptcounter = 0;
      portEXIT_CRITICAL(&mux);
     }
-	else
-		{}
-	calibrated_scale_weight_g = calibrated_scale_weight_g - tare_subtraction_factor  //Calculate weight factoring in TARE value
+  else
+    {}
+  calibrated_scale_weight_g =calibrated_scale_weight_g - tare_subtraction_factor;//Calculate weight factoring in TARE value
+
   
   //Serial.println(scale.averageValue()); //output of value prior to gram calculation
   printf("Measured Weight: %f grams\n", calibrated_scale_weight_g);
@@ -197,31 +219,9 @@ void handleInterrupt()
   printf("Measured Weight: %.4f Newtons\n", (calibrated_scale_weight_g*0.0098));
   
   vTaskDelay(500 / portTICK_RATE_MS);
- 
- // printf("Scale: %f  \n", scale.get_scale());
-  printf("GETMedianGram; %f \n", scale.getMedianGram(byte(2)));
+    
+  //there should be a function here to save to the EEPROM after the update to gain and offset are made and verified as OK.
 
-void setCalZero()
-  {
-    long readval;
-    readval = scale.averageMedianValue(byte(2)) //READ THE MEDIAN VALUE OF 3 THEN AVERAGE WITH A SECOND MEDIAN OF 3
-	scale_offset = readval //Set the value of the unloaded scale as the offset value
-	scale.SetOffset(scale_offset); //set scale offset from working value, that is updated from the read
-  }
-  
- void setCalHundred()
-  {
-  //the offset should be done before this
-    long readval;
-    readval = scale.averageMedianValue(byte(2)) //READ THE MEDIAN VALUE OF 3 THEN AVERAGE WITH A SECOND MEDIAN OF 3, when loaded with the 100.0g calibration weight.
-	float gainval = readval - scale_offset/(100-0); //calculate the factor for the gain using the distance formula, offset is assumed to be 0g of weight
-	scale_gain = gainval //Set the value of the calculated gain as the working gain valueunloaded scale as the offset value
-	scale.SetGain(scale_gain); //update the new gain value
-  }
-  	
-	//there should be a function here to save to the EEPROM after the update to gain and offset are made and verified as OK.
-
-  
   //BLE Code
   union Data data;
   if (deviceConnected) {
@@ -241,20 +241,17 @@ void setCalZero()
       Serial.printf("Data received, Interrupt activated\n");
     }
     else if (great == "$"){
-      firstValue = scale.getMedianGram(byte(2));   // first innitial no weight on the bar
+      setCalZero();  // first innitial no weight on the bar
       uint8_t inniNum = 25;
       pCharacteristic->setValue(&inniNum, 1);
-      Serial.printf("Data received, Calibration on going\n");
-      Serial.printf("Offset   %f\n",firstValue);
+      Serial.printf("Data received, for offset calibration \n");
+      
     }
     else if (great == "#"){
-      secondValue = (float)scale.averageMedianValue(2);
-      scale.setOffset(firstValue);
-      default_offset = firstValue;
-      scale.setScale((100-firstValue+default_offset)/secondValue);  //Try to reset the gain (w-innitial)/1000 
+      setCalHundred();  //Try to reset the gain (w-innitial)/1000 
       uint8_t inniNum = 25;
       pCharacteristic->setValue(&inniNum, 1);
-      Serial.printf("Gain   %f\n",(100-firstValue+default_offset)/secondValue);
+      Serial.printf("Data received, for gain calibration \n");
     }
 
   }  
