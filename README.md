@@ -11,5 +11,7 @@ University of California, Irvine (Calit2)
 
 This is a demonstration of a load cell based "Kitchen Scale" using a Bluetooth Low Energy link to an Android application running on a tablet.  The Android applicaion provides display of weight, tare, and 2-point calibration functions.  All ESP32 and Android code is available in this reposititory.
 
+The video of this demonstration is available here:  https://youtu.be/O3rAx-gd5ao
+
 If you do use any of this code for your own applications, please give the authors credit!
 
