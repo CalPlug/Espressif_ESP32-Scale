@@ -286,7 +286,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <ToggleButton
@@ -307,25 +306,34 @@
             android:textOff="Enable Calibration"
             android:textOn="Calibration Enabled"/>
 
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
         <Button
             android:id="@+id/zero_calibrateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="0g Calibrate" />
 
         <Button
             android:id="@+id/hundred_calibrateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="100g Calibrate" />
+
+        <Button
+            android:id="@+id/save_calibrateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save Calibration" />
 
     </LinearLayout>
 

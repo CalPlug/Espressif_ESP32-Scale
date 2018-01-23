@@ -6,75 +6,83 @@
     density="mdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1516408684628"
-    token="5733889508353453139"
+    timestamp="1516672932587"
+    token="-5518640250482326114"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1313" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="0" />
     <task
         name="verifier"
-        duration="26" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
+        location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1516408530843"
+        timestamp="1516672402837"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1516408684628"
+        timestamp="1516672753787"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\johnlcy\AndroidStudioProjects\AlphaESP32\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516672932587"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
