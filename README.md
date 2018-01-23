@@ -9,3 +9,7 @@ University of California, Irvine (Calit2)
 
 (C) 2017  Copyright of the Regents of California and released into the public domain.  Code subcomponents are used with fair use and are copyright of their individual authors.
 
+This is a demonstration of a load cell based "Kitchen Scale" using a Bluetooth Low Energy link to an Android application running on a tablet.  The Android applicaion provides display of weight, tare, and 2-point calibration functions.  All ESP32 and Android code is available in this reposititory.
+
+If you do use any of this code for your own applications, please give the authors credit!
+
