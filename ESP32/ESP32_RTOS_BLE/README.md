@@ -28,10 +28,11 @@ A thread-safe interrupt handler that increments an interrupt counter by one when
 
 setCalZero -> void
 
-
+Set current scale_offset to current HX711 raw value when no weight on the scale
 
 setCalHundred -> void
-
+Set the scale_gain when 100 grams object is on the scale. The scale_gain is calculated by the linear equation:
+100 grams = scale_gain * HX711_raw_value + scale_offset. 
 
 
 a_task:void* -> void
