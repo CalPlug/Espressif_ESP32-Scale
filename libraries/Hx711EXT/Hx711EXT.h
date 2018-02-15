@@ -7,6 +7,7 @@
  * http://aguegu.net
  * Hardware design: syyyd, available at http://syyyd.taobao.com
  * Created on: Oct 31, 2012
+ *  Extended with work by LEMIO: https://github.com/lemio/HX711
  *
  * Modified and Extended by Michael J. Klopfer
  * University of California, Irvine  
@@ -32,7 +33,7 @@ public:
 	float getMedianGram(byte times = 5);
 	long medianValue();
 	long averageMedianValue(byte times = 5);
-	
+
 
 private:
 	const uint8_t _pin_dout;
