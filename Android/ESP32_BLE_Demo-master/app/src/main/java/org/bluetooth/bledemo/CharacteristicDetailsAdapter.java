@@ -162,18 +162,19 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
 			fields.readBtn = (Button) convertView.findViewById(R.id.char_details_read_btn);
 			fields.tareBtn = (Button) convertView.findViewById(R.id.char_details_tare_btn);
 			fields.callibrateBtn = (Button) convertView.findViewById(R.id.char_details_calibrate_btn);
+			fields.saveCalibrateBtn = (Button) convertView.findViewById(R.id.save_calibrateBtn);
 			fields.zeroCalibrateBtn = (Button) convertView.findViewById(R.id.zero_calibrateBtn);
 			fields.hundredCalibrateBtn= (Button) convertView.findViewById(R.id.hundred_calibrateBtn);
 			//fields.writeBtn.setTag(fields.charHexValue);
 
-			/*fields.callibrateBtn.setOnClickListener(new View.OnClickListener(){
+			fields.saveCalibrateBtn.setOnClickListener(new View.OnClickListener(){
 				@Override
 				public void onClick(View v){
-					String calibV = "0x24";
+					String calibV = "0x26";
 					byte[] callibrateData = parseHexStringToBytes(calibV);
 					mBleWrapper.writeDataToCharacteristic(mCharacteristic, callibrateData);
 				}
-			});*/
+			});
 
 			fields.tareBtn.setOnClickListener(new View.OnClickListener(){
 				@Override
@@ -268,7 +269,8 @@ public class CharacteristicDetailsAdapter extends BaseAdapter {
 		fields.tareBtn.setEnabled((props & (BluetoothGattCharacteristic.PROPERTY_WRITE | BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE)) != 0);
         fields.hundredCalibrateBtn.setEnabled((props & (BluetoothGattCharacteristic.PROPERTY_WRITE | BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE)) != 0);
         fields.zeroCalibrateBtn.setEnabled((props & (BluetoothGattCharacteristic.PROPERTY_WRITE | BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE)) != 0);
-        fields.callibrateBtn.setEnabled(false);
+		fields.saveCalibrateBtn.setEnabled((props & (BluetoothGattCharacteristic.PROPERTY_WRITE | BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE)) != 0);
+		fields.callibrateBtn.setEnabled(false);
         //fields.charHexValue.setEnabled(fields.writeBtn.isEnabled());
 
 		//fields.charHexValue.setText(mAsciiValue);

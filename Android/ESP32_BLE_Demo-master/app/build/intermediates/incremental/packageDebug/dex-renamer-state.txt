@@ -1,7 +1,7 @@
-#Fri Jan 19 16:10:12 PST 2018
-base.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_78b4157e263eedf365fafb025355609e4dacd519
+#Mon Jan 22 18:02:15 PST 2018
+base.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4b7ca02e5c2276482103fb8df98cc6e9e3151702
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0d5b3e98bf5c59ea88ab437538c8a5636f0db41a\\classes.dex
-base.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0d5b3e98bf5c59ea88ab437538c8a5636f0db41a
-file.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_78b4157e263eedf365fafb025355609e4dacd519\\classes.dex
+file.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c6bb211df07ea4da7aad3f4201dad0d75ff5f36\\classes.dex
+base.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c6bb211df07ea4da7aad3f4201dad0d75ff5f36
+file.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4b7ca02e5c2276482103fb8df98cc6e9e3151702\\classes.dex

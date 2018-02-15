@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 89,
+                        "startOffset": 92,
                         "endColumn": 57,
-                        "endOffset": 142
+                        "endOffset": 145
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 147,
+                        "startOffset": 151,
                         "endColumn": 55,
-                        "endOffset": 198
+                        "endOffset": 202
                     }
                 }
             },
@@ -49,7 +49,7 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 270
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 323
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 388
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -126,14 +126,14 @@
                     "endOffset": 679
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 186,
+                        "startOffset": 192,
                         "endLine": 12,
                         "endColumn": 12,
-                        "endOffset": 472
+                        "endOffset": 484
                     }
                 }
             },
@@ -147,14 +147,14 @@
                     "endOffset": 839
                 },
                 "from": {
-                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\AlphaESP32\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 510,
+                        "startOffset": 525,
                         "endLine": 17,
                         "endColumn": 12,
-                        "endOffset": 665
+                        "endOffset": 682
                     }
                 }
             }

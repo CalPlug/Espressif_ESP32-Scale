@@ -6,64 +6,90 @@
 #include <BLEServer.h>
 #include <BLEUtils.h>
 #include <BLE2902.h>
-
-
 #include <Hx711EXT.h> //Load Cell A/D (HX711 Extended library by M. J. Klopfer)
-#include <Adafruit_TLC59711.h> //12 Ch LED Controller, uses SPI only MOSI and CLK
 #include <SPI.h>
 #include <EEPROM.h>  //this is needed to access EEPROM (not implemented yet)
  
-#define BLINK_GPIO 13
 
-
-//Constants
-#define portTICK_PERIOD_MS 10
-
-
+//----------------------------------------HX711 AND TARE PARAMETERS-------------------------------
 //Interface Assignments
 #define HX711CLK 19
 #define HX711DA 18
-#define PIEZO 4
 #define TAREBTN 21
-#define TLC59711CLK 23
-#define TLC59711DA 5
-
-//Peripheral Setup
-#define NUM_TLC59711 1  // How many boards do you have chained? (Only 1 in this example)
 
  //Define Objects
 Hx711 scale(HX711DA, HX711CLK); // Object for scale - Hx711.DOUT - pin #A2 & Hx711.SCK - pin #A3 ---this sensor uses a propriatary synchronus serial communication, not I2C
-Adafruit_TLC59711 tlc = Adafruit_TLC59711(NUM_TLC59711, TLC59711CLK, TLC59711DA);
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
 
-//----------------------------------
 //Global Variables
 float calibrated_scale_weight_g=0; //Holding variable for weight
 volatile int interruptcounter = 0;  //Volatile as this is accessed by multiple threaded activities  //(see: https://techtutorialsx.com/2017/09/30/esp32-arduino-external-interrupts/)
 
 //Initial Calibration Factors and offsets
-const float default_scale_gain=.0022103;   //Initial Sensor Calibration Offset Value (fill in the `ratio` value here) [ratio = (w - offset) / 1000]  where W is a known weight, say 1000 grams  ((Used if EEPROM Issue is suspected))
-const float default_scale_offset=30769.40;  //ADC Value of unloaded sensor (Used if EEPROM Issue is suspected)
-
 float scale_gain = .0022103; //Initial Sensor Calibration Offset Value (fill in the `offset` value here) - working copy, can be changed and overwritten
 float scale_offset = 30769.40;  //ADC Value of unloaded sensor - working copy, can be changed and overwritten
 float tare_subtraction_factor=-6128;
-//Piezo Parameters
-int freq1 = 2000;
-int freq2 = 125;
-int dutyCycle = 50;
-int channel = 0;
-int resolution = 8;
-int piezoch = 3;
 
+//---------------------------------------EEPROM READ AND WRITE FUNCTIONS----------------------------
+// ONLY FOR EEPROM WRITE FUNCTION AND READ FUNCTION
+// FLOAT- BYTE type conversion
+union FData{   
+  float flData;
+  byte DataA[4];
+};
+//LONG - BYTE type conversion
+union LData{   
+  long lgData;
+  byte DataB[4];
+};
+  
+//I only use 8 bytes of EEPROM. If you changed the size here, you also need to change the function below 
+#define EEPROM_SIZE 8 
+//Save float number and long number into EEPROM
+void saveCalibrate(float num, long num2){
+  union FData fdata;
+  fdata.flData = num; 
+  byte* fbyte = fdata.DataA;
+
+  union LData ldata;
+  ldata.lgData = num2;
+  byte* lbyte = ldata.DataB;
+  
+  for (int i = 0; i < 4; i++){
+      EEPROM.write(i, fbyte[i]);
+      EEPROM.write(i+4, lbyte[i]);
+  }
+  EEPROM.commit();
+}
+
+//Get float number from EEPROM
+float getFloatEeprom(){
+  byte temp[4];
+  union FData fdata;
+  for (int i = 0; i< 4 ; i++){
+     temp[i] = EEPROM.read(i);
+     fdata.DataA[i] = temp[i];
+  }
+  Serial.printf("%f \n",fdata.flData);
+  return fdata.flData;
+ }
+
+//Get long number from EEPROM
+long getLongEeprom(){
+  byte temp[4];
+  union LData ldata;
+  for (int i = 0; i< 4 ; i++){
+     temp[i] = EEPROM.read(i+4);
+     ldata.DataB[i] = temp[i];
+  }
+  Serial.printf("%ld \n", ldata.lgData);
+  return ldata.lgData;
+}
+//-----------------------------------------BLE FUNCTION-----------------------------------------------
 //BLE parameters
 BLECharacteristic *pCharacteristic;
 BLECharacteristic *pCharacteristic2;
 bool deviceConnected = false;
-
-
-// See the following for generating UUIDs:
-// https://www.uuidgenerator.net/
 
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
 #define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
@@ -71,13 +97,12 @@ bool deviceConnected = false;
 #define SERVICE2_UUID        "45ecddcf-c316-488d-8558-3222e5cb9b3c"
 #define CHARACTERISTIC2_UUID "4a78b8dd-a43d-46cf-9270-f6b750a717c8"
 
-//Convert float data into raw byte data (little endian)
+//Convert float data into raw byte data (little endian) 
+//ONLY FOR Bluetooth float data transfer 
 union Data{   
   float flData;
   uint8_t DataA[4];
 } ;
-
-
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
       deviceConnected = true;
@@ -88,46 +113,42 @@ class MyServerCallbacks: public BLEServerCallbacks {
     }
 };
 
-//------------------------------------
 
-//---------------------------------------------------------
+//------------------------------------------PROGRAM START ----------------------------------------
 void setup()
 {
-  Serial.begin(115200);  //begin Serial for LCD
+  Serial.begin(115200); 
     
-  //This needs to be added:
-    //Read from EEPROM, insert values into scale_offset and default_offset
-    //if this faiils, run the following
-    //  scale_gain = default_scale_gain; //Use Default Value
-        //  scale_offset=default_scale_offset; //Use Default Value
-  //Set scale calibration
-  
-  scale.setScale(scale_gain);  //Set Scale Gain from working value
-  scale.setOffset(scale_offset); //set scale offset from working value
-  
+  //Read scale setting from EEPROM
+
+   if (!EEPROM.begin(EEPROM_SIZE))
+  {
+    Serial.println("failed to initialise EEPROM, using default settings"); 
+    scale.setScale(scale_gain);  //Set Scale Gain from working value
+    scale.setOffset(scale_offset); //set scale offset from working value
+  } 
+  else {
+     Serial.println(" bytes read from Flash . Values are:");
+    for (int i = 0; i < EEPROM_SIZE; i++)
+    {
+      Serial.print(byte(EEPROM.read(i))); Serial.print(" ");
+    }
+    Serial.println("Loading setting from EEPROM"); 
+    scale.setScale(getFloatEeprom());
+    scale.setOffset(getLongEeprom());
+  }
+   
   tare_subtraction_factor=(scale.getMedianGram(byte(2))-scale_offset);  //default power on tare
-  
   
   //User Interface Buttons Initialize
   pinMode(TAREBTN, INPUT_PULLUP);      //Tare Button 
   attachInterrupt(digitalPinToInterrupt(TAREBTN), handleInterrupt, RISING);
-
-  pinMode(PIEZO, OUTPUT);     //Select Button      
-  digitalWrite(PIEZO, LOW);
-
-  //Initalize Piezo
-  ledcSetup(channel, freq1, resolution);
-  ledcAttachPin(4, channel);
-
-  //Initialize LED Driver
-  tlc.begin();
-  tlc.write();
   
   
   Serial.println("****************END OF BIOS MESSAGES****************");
   Serial.println("");
     // Create the BLE Device
-  BLEDevice::init("BLE_Urology");
+  BLEDevice::init("BLE_LIBRA");
 
   // Create the BLE Server
   BLEServer *pServer = BLEDevice::createServer();
@@ -137,18 +158,19 @@ void setup()
   BLEService *pService = pServer->createService(SERVICE_UUID);
 
   // Create a BLE Characteristic
+  //BLE_READ Characteristic
   pCharacteristic = pService->createCharacteristic(
                       CHARACTERISTIC_UUID,
                       BLECharacteristic::PROPERTY_WRITE  |
                       BLECharacteristic::PROPERTY_INDICATE
                     );
 
-  // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.client_characteristic_configuration.xml
-  // Create a BLE Descriptor
   pCharacteristic->addDescriptor(new BLE2902());
+
+  //Set up default value for calibration, tare function
   uint8_t inniNum = 25;
   pCharacteristic->setValue(&inniNum, 1);
-  
+  //Calibration and Tare Characteristic
   pCharacteristic2 = pService->createCharacteristic(
                     CHARACTERISTIC2_UUID,
                     BLECharacteristic::PROPERTY_READ   |
@@ -253,58 +275,21 @@ void handleInterrupt()
       pCharacteristic->setValue(&inniNum, 1);
       Serial.printf("Data received, for gain calibration \n");
     }
-
+    else if (great == "&"){
+      saveCalibrate(scale_gain, scale_offset);
+      uint8_t inniNum = 25;
+      pCharacteristic->setValue(&inniNum, 1);
+      Serial.printf("SAVE FUNCTION COMMAND RECEIVED, new setting saved \n");
+    }
   }  
   printf("\n");
   }
 }
  
-void hello_task(void *pvParameter)
-{
- //Light LEDS, eventually will be used to make an LED bargraph
-  while(1)
-  {
-    
- //Demo lights - ramp up to all on
-      for (int i=0; i<65535; i = i + 100)
-      {
-        tlc.setLED(0, i, i, i);
-        tlc.write();
-        tlc.setLED(1, i, i, i);
-        tlc.write();
-        tlc.setLED(2, i, i, i);
-        tlc.write();
-        tlc.setLED(3, i, i, i);
-        tlc.write();
-      }
-   //Make tone  
-  //ledcWriteTone(channel, freq2);
-        
-   vTaskDelay(5000 / portTICK_PERIOD_MS);
-
-//Demo lights - state 1 (all Off)
-      tlc.setLED(0, 0, 0, 0);
-      tlc.write();
-      tlc.setLED(1, 0, 0, 0);
-      tlc.write();
-      tlc.setLED(2, 0, 0, 0);
-      tlc.write();
-      tlc.setLED(3, 0, 0, 0);
-      tlc.write();
-      
-   //Make tone     
-  //ledcWriteTone(channel, freq1);
-  //ledcWrite(channel, dutyCycle);
-   vTaskDelay(5000 / portTICK_RATE_MS);
-  }
-}
- 
 void loop()
 {
-    xTaskCreate(&a_task, "a_task", 4096, NULL, 5, NULL); //Details:  http://web.ist.utl.pt/~ist11993/FRTOS-API/group___task_ctrl.html
-    xTaskCreate(&hello_task, "hello_task", 4096,NULL,5,NULL );
+    xTaskCreate(&a_task, "a_task", 4096, NULL, 5, NULL);  //Details:  http://web.ist.utl.pt/~ist11993/FRTOS-API/group___task_ctrl.html
     while (1)
     {  
-
   } //Just loop after first run, treat this as a main() function rather than a loop
 }
