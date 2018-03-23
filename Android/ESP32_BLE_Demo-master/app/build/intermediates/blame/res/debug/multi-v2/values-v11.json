@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/src/main/res/values-v11/styles.xml",
+                    "from": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "177",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "309"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    }
+                },
+                {
+                    "source": "/Users/yanjie/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/e109beea9d2c316b8b8ccd82230dec6f/res/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2,8,14,20,26,32,38,39,40,45,50,52,54,55,56,107,159",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,474,899,1327,1753,2180,2605,2694,2795,3203,3623,3730,3859,3930,4013,7721,11569",
+                        "endLines": "7,13,19,25,31,37,38,39,44,49,51,53,54,55,106,158,159",
+                        "endColumns": "12,12,12,12,12,12,88,100,12,12,12,12,70,82,12,12,90",
+                        "endOffsets": "469,894,1322,1748,2175,2600,2689,2790,3198,3618,3725,3854,3925,4008,7716,11564,11655"
+                    },
+                    "to": {
+                        "startLines": "5,11,17,23,29,35,41,42,43,48,53,55,57,58,59,110,162",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "192,611,1036,1464,1890,2317,2742,2831,2932,3340,3760,3867,3996,4067,4150,7858,11706",
+                        "endLines": "10,16,22,28,34,40,41,42,47,52,54,56,57,58,109,161,162",
+                        "endColumns": "12,12,12,12,12,12,88,100,12,12,12,12,70,82,12,12,90",
+                        "endOffsets": "606,1031,1459,1885,2312,2737,2826,2927,3335,3755,3862,3991,4062,4145,7853,11701,11792"
+                    }
+                }
+            ]
+        }
+    ]
+}

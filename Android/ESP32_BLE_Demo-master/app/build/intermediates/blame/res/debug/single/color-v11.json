@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/yanjie/.android/build-cache/de21c500c1b6ac0856838d0b13bdcbca5561e221/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/yanjie/.android/build-cache/de21c500c1b6ac0856838d0b13bdcbca5561e221/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

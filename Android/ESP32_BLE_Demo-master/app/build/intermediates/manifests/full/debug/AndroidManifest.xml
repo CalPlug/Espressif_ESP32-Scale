@@ -15,16 +15,19 @@
         android:name="android.hardware.bluetooth_le"
         android:required="false" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:logo="@drawable/ic_launcher"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="BluetoothLE_Test"
+        android:logo="@mipmap/ic_launcher"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="org.bluetooth.bledemo.ScanningActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+        <activity android:name="yanjiex.calit2.uci.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,10 +35,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="org.bluetooth.bledemo.ScanningActivity"
+            android:label="Scan"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="org.bluetooth.bledemo.PeripheralActivity"
             android:label="@string/title_activity_peripheral"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="yanjiex.calit2.uci.Settings"
+            android:label="Settings"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

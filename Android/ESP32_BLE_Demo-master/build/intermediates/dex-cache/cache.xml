@@ -3,21 +3,165 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4b7ca02e5c2276482103fb8df98cc6e9e3151702\classes.dex" />
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e23162aec38ca9f9c923cee98702c234678eef99/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/Users/yanjie/.android/build-cache/2669c4d3dd46d3da6cea03fdba83bdf0228119ae/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="65e587f119073ffd21ee42f0badd87a840fc47e8">
-        <dex dex="C:\Users\johnlcy\AndroidStudioProjects\Espressif_ESP32-Scale\Android\ESP32_BLE_Demo-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4c6bb211df07ea4da7aad3f4201dad0d75ff5f36\classes.dex" />
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6c7dc45fa468191c61ba05c44c7df4e116c1f502/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_ea8aeb0047400b093a5325c06e926a74ff29f7a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_9a7c185299120c60c3dcafaf2933758a9519c5f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/2669c4d3dd46d3da6cea03fdba83bdf0228119ae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/classes_6c7dc45fa468191c61ba05c44c7df4e116c1f502.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_9a7c185299120c60c3dcafaf2933758a9519c5f6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/.android/build-cache/5661ab61170258a4c7675dd7a09ced02563c00f3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1fb1e8031ae66dd22376729362528ff3a5a19190/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/.android/build-cache/6b4d3bb62ed14815ca9b08c816b71f9bbdc5d88e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f714adc11d4ad7d7c08025f87d7b6655f48ded8/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/3d9553b1b4622666bcf302c41a5b6811f35c0093/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_33a3111b2116fbdd4d13f69436d1443547f2812c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/5661ab61170258a4c7675dd7a09ced02563c00f3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/classes_1fb1e8031ae66dd22376729362528ff3a5a19190.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bba3a6cff509d943a19c549e79c46411841f1e5">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_809d1d98fb3755957b0290cf9a03f34d00d0b0d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/.android/build-cache/3d9553b1b4622666bcf302c41a5b6811f35c0093/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_33a3111b2116fbdd4d13f69436d1443547f2812c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/.android/build-cache/3d9553b1b4622666bcf302c41a5b6811f35c0093/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_77d6405f27397a113ae971b5ef099e4e95ad81fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_ea8aeb0047400b093a5325c06e926a74ff29f7a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/de21c500c1b6ac0856838d0b13bdcbca5561e221/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/classes_6553038a64565999d57eb30e1ca15706dc137fdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/3d9553b1b4622666bcf302c41a5b6811f35c0093/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/classes_77d6405f27397a113ae971b5ef099e4e95ad81fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yanjie/.android/build-cache/6b4d3bb62ed14815ca9b08c816b71f9bbdc5d88e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/pre-dexed/debug/classes_4f714adc11d4ad7d7c08025f87d7b6655f48ded8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yanjie/.android/build-cache/de21c500c1b6ac0856838d0b13bdcbca5561e221/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6553038a64565999d57eb30e1ca15706dc137fdf/classes.dex" />
     </item>
 
 </items>

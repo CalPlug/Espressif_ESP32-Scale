@@ -6,4 +6,28 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_peripheral">Peripheral</string>
 
+
+    <string name="button_start">Start</string>
+    <string name="button_pause">Pause</string>
+    <string name="button_stop">Stop</string>
+    <string name="button_Continue">Continue</string>
+    <string name="button_settings">Calibration</string>
+    <string name="button_conn">Connect</string>
+    <string name="button_Pair">Pair New Device</string>
+    <string name="button_submit">Done</string>
+    <string name="button_fill_zero">Abort graph when data is missing</string>
+
+    <string name="threshold_title">Please enter the threshold for each level in an increasing order</string>
+    <string name="lb">lb</string>
+
+    <string name="scrub_format">Force intensity: %1$s</string>
+
+    <string-array name="sound_array">
+        <item> 0 </item>
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+    </string-array>
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/Device_Info"
+        android:text="Disconnected"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/Device_Rssi"
+        android:text="YES"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tare"
+        android:id = "@+id/Main_tare"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set 0g"
+        android:id = "@+id/Main_SetZero"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set 100g"
+        android:id = "@+id/Main_SetHund"
+        android:layout_gravity="center"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.robinhood.spark.SparkView
+            android:id="@+id/sparkview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:spark_scrubEnabled="true"
+            app:spark_lineColor="@color/colorAccent"
+            app:spark_animateChanges="true"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/info_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_alignParentBottom="true"
+        android:text="Tap and hold to see the value " />
+</LinearLayout>
+</ScrollView>
