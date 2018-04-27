@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import yanjiex.calit2.uci.MainActivity;
+
 public class ScanningActivity extends ListActivity {
 	
 	private static final long SCANNING_TIMEOUT = 5 * 1000; /* 5 seconds */
@@ -120,22 +122,23 @@ public class ScanningActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         final BluetoothDevice device = mDevicesListAdapter.getDevice(position);
-        if (device == null) return;
-        
-        final Intent intent = new Intent(this, PeripheralActivity.class);
+        if (device == null)
+            return;
+
+        final Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra(PeripheralActivity.EXTRAS_DEVICE_NAME, device.getName());
         intent.putExtra(PeripheralActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
         intent.putExtra(PeripheralActivity.EXTRAS_DEVICE_RSSI, mDevicesListAdapter.getRssi(position));
-        
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+
         if (mScanning) {
             mScanning = false;
             invalidateOptionsMenu();
             mBleWrapper.stopScanning();
         }
+    }
 
-        startActivity(intent);
-    }    
-    
     /* check if user agreed to enable BT */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

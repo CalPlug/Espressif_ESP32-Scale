@@ -1,7 +1,7 @@
-#Mon Jan 22 18:02:15 PST 2018
-base.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4b7ca02e5c2276482103fb8df98cc6e9e3151702
+#Thu Feb 15 21:48:01 PST 2018
+base.0=/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_809d1d98fb3755957b0290cf9a03f34d00d0b0d3
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c6bb211df07ea4da7aad3f4201dad0d75ff5f36\\classes.dex
-base.1=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c6bb211df07ea4da7aad3f4201dad0d75ff5f36
-file.0=C\:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4b7ca02e5c2276482103fb8df98cc6e9e3151702\\classes.dex
+file.1=/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e23162aec38ca9f9c923cee98702c234678eef99/classes.dex
+base.1=/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e23162aec38ca9f9c923cee98702c234678eef99
+file.0=/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_809d1d98fb3755957b0290cf9a03f34d00d0b0d3/classes.dex

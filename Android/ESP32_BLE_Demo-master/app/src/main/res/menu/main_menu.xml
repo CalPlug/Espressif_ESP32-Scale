@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_pairing"
+        android:title="Pairing"
+        android:visible="true"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/main_setting"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="Disconnect"
+        android:id="@+id/main_disconnect"
+        android:visible="false"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        />
+</menu>

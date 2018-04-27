@@ -1,10 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\scanning.xml",
-        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\menu\\scanning.xml"
+        "merged": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/res/merged/debug/menu/scanning.xml",
+        "source": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/src/main/res/menu/scanning.xml"
     },
     {
-        "merged": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\peripheral.xml",
-        "source": "C:\\Users\\johnlcy\\AndroidStudioProjects\\Espressif_ESP32-Scale\\Android\\ESP32_BLE_Demo-master\\app\\src\\main\\res\\menu\\peripheral.xml"
+        "merged": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/res/merged/debug/menu/main_menu.xml",
+        "source": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/src/main/res/menu/main_menu.xml"
+    },
+    {
+        "merged": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/res/merged/debug/menu/peripheral.xml",
+        "source": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/src/main/res/menu/peripheral.xml"
     }
 ]

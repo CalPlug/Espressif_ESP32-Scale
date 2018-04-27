@@ -285,10 +285,21 @@ void handleInterrupt()
   printf("\n");
   }
 }
- 
+
+ void c_task(void *pvParameter){
+  while(1){
+    printf("THIS IS IN TASK C\n");  
+//    getScaleValue();
+    printf("Measured Weight: %f grams\n", calibrated_scale_weight_g);
+    printf("Measured Weight: %.3f ounces\n", (calibrated_scale_weight_g*0.035274));
+    printf("Measured Weight: %.4f Newtons\n", (calibrated_scale_weight_g*0.0098));
+  
+  }
+}
 void loop()
 {
     xTaskCreate(&a_task, "a_task", 4096, NULL, 5, NULL);  //Details:  http://web.ist.utl.pt/~ist11993/FRTOS-API/group___task_ctrl.html
+    xTaskCreate(&c_task, "c_task", 4096, NULL, 5, NULL);
     while (1)
     {  
   } //Just loop after first run, treat this as a main() function rather than a loop

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/yanjie/Desktop/CALIT2/BluetoothLe/ESP32_BLE_Demo-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-v13/values-w360dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 54,
+                    "endOffset": 105
+                },
+                "from": {
+                    "file": "/Users/yanjie/.android/build-cache/de21c500c1b6ac0856838d0b13bdcbca5561e221/output/res/values-w360dp-v13/values-w360dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 54,
+                        "endOffset": 105
+                    }
+                }
+            }
+        ]
+    }
+]
