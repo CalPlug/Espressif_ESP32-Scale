@@ -14,6 +14,7 @@ import {
   ScrollView,
   AppState,
   Dimensions,
+  ToastAndroid
 } from 'react-native';
 import BleManager from 'react-native-ble-manager';
 import DevicePg from './DevicePg';
@@ -116,18 +117,19 @@ export default class BLE extends Component {
     }
   }
 
-  retrieveConnected(){
+  /*retrieveConnected(){
     BleManager.getConnectedPeripherals([]).then((results) => {
-      console.log("results:" + results);
       var peripherals = this.state.peripherals;
+      console.log("results: " + peripherals);
       for (var i = 0; i < results.length; i++) {
         var peripheral = results[i];
         peripheral.connected = true;
         peripherals.set(peripheral.id, peripheral);
         this.setState({ peripherals });
+        console.log("results: " + peripherals);
       }
     });
-  }
+  }*/
 
   handleDiscoverPeripheral(peripheral){
     var peripherals = this.state.peripherals;
@@ -140,58 +142,17 @@ export default class BLE extends Component {
 
   test(peripheral) {
     if (peripheral){
-      /*if (peripheral.connected){
-        BleManager.disconnect(peripheral.id);
+      if (peripheral.connected){
+        //this.props.navigation.navigate('DevicePg', { peripheral: peripheral.name });
+        //BleManager.disconnect(peripheral.id);
       } else{
-        BleManager.connect(peripheral.id).then(() => {
-          let peripherals = this.state.peripherals;
-          let p = peripherals.get(peripheral.id);
-          if (p) {
-            p.connected = true;
-            peripherals.set(peripheral.id, p);
-            this.setState({peripherals});
-          }
-          console.log('Connected to ' + peripheral.id);
+        //console.log("results: " + "not available");
+        this.props.navigation.navigate('DevicePg', 
+          { device_id: peripheral.id,
+            peripherals: this.state.peripherals,
 
-          setTimeout(() => {
-            BleManager.retrieveServices(peripheral.id).then((peripheralInfo) => {
-              console.log(peripheralInfo);
-              var service = '13333333-3333-3333-3333-333333333337';
-              var bakeCharacteristic = '13333333-3333-3333-3333-333333330003';
-              var crustCharacteristic = '13333333-3333-3333-3333-333333330001';
-
-              setTimeout(() => {
-                BleManager.startNotification(peripheral.id, service, bakeCharacteristic).then(() => {
-                  console.log('Started notification on ' + peripheral.id);
-                  setTimeout(() => {
-                    BleManager.write(peripheral.id, service, crustCharacteristic, [0]).then(() => {
-                      console.log('Writed NORMAL crust');
-                      BleManager.write(peripheral.id, service, bakeCharacteristic, [1,95]).then(() => {
-                        console.log('Writed 351 temperature, the pizza should be BAKED');
-                        /*
-                        var PizzaBakeResult = {
-                          HALF_BAKED: 0,
-                          BAKED:      1,
-                          CRISPY:     2,
-                          BURNT:      3,
-                          ON_FIRE:    4
-                        };*/
-                      /*});
-                    });
-
-                  }, 500);
-                }).catch((error) => {
-                  console.log('Notification error', error);
-                });
-              }, 200);
-            });
-
-          }, 900);
-        }).catch((error) => {
-          console.log('Connection error', error);
-        });
-      }*/
-      this.props.navigation.navigate('DevicePg');
+          });
+      }
     }
   }
 
@@ -204,9 +165,9 @@ export default class BLE extends Component {
         <TouchableHighlight style={{marginTop: 40,margin: 20, padding:20, backgroundColor:'#ccc'}} onPress={() => this.startScan() }>
           <Text>Scan Bluetooth ({this.state.scanning ? 'on' : 'off'})</Text>
         </TouchableHighlight>
-        <TouchableHighlight style={{marginTop: 0,margin: 20, padding:20, backgroundColor:'#ccc'}} onPress={() => this.retrieveConnected() }>
+        {/*<TouchableHighlight style={{marginTop: 0,margin: 20, padding:20, backgroundColor:'#ccc'}} onPress={() => this.retrieveConnected() }>
           <Text>Retrieve connected peripherals</Text>
-        </TouchableHighlight>
+        </TouchableHighlight>*/}
         <ScrollView style={styles.scroll}>
           {(list.length == 0) &&
             <View style={{flex:1, margin: 30}}>

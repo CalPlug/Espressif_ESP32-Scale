@@ -4,9 +4,12 @@ import { StackNavigator } from 'react-navigation';
 import BLE from '../BLE';
 import DevicePg from '../DevicePg';
 
-export default const Stack = StackNavigator({
+const Stack = StackNavigator({
 	BLE: {
-		screen: BLE
+		screen: BLE,
+		navigationOptions: {
+			title: 'BLE Demo'
+		}
 	},
 	DevicePg: {
 		screen: DevicePg,
@@ -15,3 +18,5 @@ export default const Stack = StackNavigator({
 		}
 	}
 });
+
+export default Stack;
