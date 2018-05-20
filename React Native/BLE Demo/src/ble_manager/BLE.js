@@ -37,9 +37,9 @@ export default class BLE extends Component {
 
     this.handleDiscoverPeripheral = this.handleDiscoverPeripheral.bind(this);
     this.handleStopScan = this.handleStopScan.bind(this);
-    this.handleUpdateValueForCharacteristic = this.handleUpdateValueForCharacteristic.bind(this);
     this.handleDisconnectedPeripheral = this.handleDisconnectedPeripheral.bind(this);
     this.handleAppStateChange = this.handleAppStateChange.bind(this);
+    //this.sendDeviceInfo = this.sendDeviceInfo.bind(this);
   }
 
   componentDidMount() {
@@ -49,9 +49,7 @@ export default class BLE extends Component {
 
     this.handlerDiscover = bleManagerEmitter.addListener('BleManagerDiscoverPeripheral', this.handleDiscoverPeripheral );
     this.handlerStop = bleManagerEmitter.addListener('BleManagerStopScan', this.handleStopScan );
-    this.handlerDisconnect = bleManagerEmitter.addListener('BleManagerDisconnectPeripheral', this.handleDisconnectedPeripheral );
-    this.handlerUpdate = bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', this.handleUpdateValueForCharacteristic );
-
+  
     if (Platform.OS === 'android' && Platform.Version >= 23) {
         PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION).then((result) => {
             if (result) {
@@ -98,10 +96,6 @@ export default class BLE extends Component {
     console.log('Disconnected from ' + data.peripheral);
   }
 
-  handleUpdateValueForCharacteristic(data) {
-    console.log('Received data from ' + data.peripheral + ' characteristic ' + data.characteristic, data.value);
-  }
-
   handleStopScan() {
     console.log('Scan is stopped');
     this.setState({ scanning: false });
@@ -141,18 +135,15 @@ export default class BLE extends Component {
   }
 
   test(peripheral) {
-    if (peripheral){
-      if (peripheral.connected){
-        //this.props.navigation.navigate('DevicePg', { peripheral: peripheral.name });
-        //BleManager.disconnect(peripheral.id);
-      } else{
-        //console.log("results: " + "not available");
-        this.props.navigation.navigate('DevicePg', 
-          { device_id: peripheral.id,
-            peripherals: this.state.peripherals,
-
-          });
-      }
+    if (peripheral) {
+      this.props.navigation.navigate('DevicePg', 
+        { 
+          device_name: peripheral.name,
+          device_id: peripheral.id,
+          peripherals: this.state.peripherals,
+          device_state: peripheral.connected,
+        }
+      );
     }
   }
 
