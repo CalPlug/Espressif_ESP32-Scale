@@ -1,8 +1,8 @@
 # Avia HX711 Based Weight Scale Examples with Espressif ESP32, Arduino, and Bluetooth Low Energy Interfacing
 
-Project Team: Jonathan Lim, Richard Xu, Josefina Zinkewich, Hamed Ghafarshad, and Sean Santarsiero
+Project Team: Chi Yang "Jonathan" Lim, Yan Jie "Richard" Xu, Josefina Zinkewich, Hamed Ghafarshad, and Sean Santarsiero
 
-Project Manager: Michael Klopfer, PhD and Prof. G.P. Li
+Project Manager: Michael J. Klopfer, PhD and Prof. G.P. Li
 
 University of California, Irvine (Calit2)
 
