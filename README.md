@@ -9,7 +9,7 @@ University of California, Irvine (Calit2)
 
 (C) 2017  Copyright of the Regents of California and released into the public domain.  Code subcomponents are used with fair use and are copyright of their individual authors.
 
-This is a demonstration of a load cell based "Kitchen Scale" using a Bluetooth Low Energy link to an Android application running on a tablet.  This application is based on the Avia hx711 Load cell amplifier IC using a modified library with median filtering (included). The Android applicaion provides display of weight, tare, and 2-point calibration functions.  All ESP32 and Android code is available in this reposititory.
+This is a demonstration of a load cell based "Kitchen Scale" using a Bluetooth Low Energy link to an Android application running on a tablet.  This application is based on the Avia hx711 Load cell amplifier IC using a modified library with median filtering (included - https://github.com/CalPlug/Espressif_ESP32-Scale/tree/master/libraries/Hx711EXT). The Android applicaion provides display of weight, tare, and 2-point calibration functions.  All ESP32 and Android code is available in this reposititory.
 
 The video of this demonstration is available here:  https://youtu.be/O3rAx-gd5ao
 
